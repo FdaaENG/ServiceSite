@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
-
+import { FaHome, FaDog, FaCalendarAlt, FaEnvelope } from 'react-icons/fa';
+import "../styles/NavBar.css";
 function Navbar() {
   return (
     <nav className="navbar">
@@ -8,10 +9,10 @@ function Navbar() {
         <span>PawPoint</span>
       </div>
       <ul className="navbar-links">
-        <li><NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Home</NavLink></li>
-        <li><NavLink to="/services" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Services</NavLink></li>
-        <li><NavLink to="/booking" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Booking</NavLink></li>
-        <li><NavLink to="/contact" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Contact</NavLink></li>
+      <li><NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}><FaHome className="nav-icon" /><span className="nav-text">Home</span></NavLink></li>
+        <li><NavLink to="/services" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}><FaDog className="nav-icon" /><span className="nav-text">Services</span></NavLink></li>
+        <li><NavLink to="/booking" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}><FaCalendarAlt className="nav-icon" /><span className="nav-text">Booking</span></NavLink></li>
+        <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}><FaEnvelope className="nav-icon" /><span className="nav-text">Contact</span></NavLink></li>
       </ul>
     </nav>
   );
