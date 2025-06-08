@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <img src="/src/assets/Logo.png" alt="PawPoint Logo" className="navbar-logo" />
+        <img src="/assets/Logo.png" alt="PawPoint Logo" className="navbar-logo" />
         <span>PawPoint</span>
       </div>
       <ul className="navbar-links">
