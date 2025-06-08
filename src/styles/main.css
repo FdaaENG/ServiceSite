@@ -32,7 +32,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100%; 
-    margin-left: -1rem;
+    margin-left: -1.5rem;
 }
 .hero-text {
     max-width: 600px;
@@ -41,30 +41,19 @@ body {
 }
 .hero-text h1 {
     font-size: 2.5rem;
+    font-weight: bold;
     margin-bottom: 1rem;
 }
 .hero-text p {
     font-size: 1.25rem;
+    font-weight: 600;
     margin-bottom: 1.5rem; 
-}
-.hero-actions button {
-    margin-right: 1rem;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    background-color: #e68a00;
-    color: rgb(0, 0, 0);
-    cursor: pointer; 
-}
-.hero-actions button:hover {
-    background-color: #ffa033; 
 }
 .hero-designer {
     width: 100%;
     text-align: left;
-    font-size: 1.4rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: #000000;
     opacity: 0.85; 
 }
@@ -77,6 +66,9 @@ body {
 .hero-designer a:hover {
     text-decoration: underline;
     color: #000000;
+}
+.hero-actions .btn {
+    margin-right: 1rem; 
 }
 .navbar {
     position: absolute;
@@ -111,10 +103,222 @@ body {
     display: flex;
     gap: 3rem; 
 }
-.navbar-links li a {
+.nav-link {
     text-decoration: none;
+    color: #000;
+    font-weight: 300;
+    position: relative;
+    padding-bottom: 0.2rem;
+}
+.nav-link.active {
+    font-weight: 700;
+    border-bottom: 2px solid #000;
+}
+.services-section {
+    padding: 4rem 5%;
+    text-align: center; 
+}
+.services-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem; 
+}
+.services-description {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
     color: #000000;
-    font-weight: 300; 
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem; 
+}
+.service-card {
+    position: relative;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+}
+.service-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); 
+}
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+    color: #fff;
+    text-align: left; 
+}
+.card-overlay h2,
+.card-overlay p {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.card-overlay h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem; 
+}
+.card-overlay p {
+    font-size: 1rem;
+    margin-bottom: 1rem; 
+}
+.booking-section {
+    padding: 4rem 5%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center; 
+}
+.booking-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem; 
+}
+.booking-description {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: #000000; 
+}
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; 
+}
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    resize: vertical;
+}
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    border-color: #e68a00;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(230, 138, 0, 0.2);
+}
+.confirmation-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; 
+}
+.confirmation-content {
+    background: #fffaf4;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%; 
+}
+.confirmation-content h2 {
+    margin-bottom: 1rem;
+}
+
+.confirmation-content p {
+    margin-bottom: 2rem;
+    color: #000000; 
+}
+.contact-section {
+    padding: 4rem 5%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center; 
+}
+.contact-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem; 
+}
+.contact-intro {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    color: #000000; 
+}
+.contact-form {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    background-color: #fffaf4;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); 
+}
+.contact-form h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem; 
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #e68a00;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(230, 138, 0, 0.2);
+}
+.contact-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem; 
+}
+.contact-box {
+    flex: 1 1 300px;
+    background-color: #fffaf4;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: left; 
+}
+.visit-us h2 {
+    font-size: 1.8rem;
+}
+.visit-us p {
+    font-size: 1.1rem; 
+}
+.contact-form input,
+.contact-form textarea {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    resize: vertical;
+}
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #e68a00;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    appearance: none;
+    font-family: inherit;
+    text-align: center; 
+}
+.btn:hover {
+    background-color: #ffa033; 
 }
 * {
     box-sizing: border-box; 

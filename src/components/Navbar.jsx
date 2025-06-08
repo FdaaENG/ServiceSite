@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -8,10 +8,10 @@ function Navbar() {
         <span>PawPoint</span>
       </div>
       <ul className="navbar-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/services">Services</Link></li>
-        <li><Link to="/booking">Booking</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+        <li><NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Home</NavLink></li>
+        <li><NavLink to="/services" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Services</NavLink></li>
+        <li><NavLink to="/booking" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Booking</NavLink></li>
+        <li><NavLink to="/contact" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Contact</NavLink></li>
       </ul>
     </nav>
   );

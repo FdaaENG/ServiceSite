@@ -1,13 +1,15 @@
+import { Link } from 'react-router-dom';
+
 function Home() {
   return (
   <section className="hero-section">
   <div className="hero-content">
     <div className="hero-text">
       <h1>Welcome to PawPoint</h1>
-      <p>Compassionate care for your furry family members.</p>
+      <p>Compassionate care for your furry family.</p>
       <div className="hero-actions">
-        <button>Book Appointment</button>
-        <button>Explore Services</button>
+      <Link to="/services" className="btn">Explore Services</Link>
+      <Link to="/booking" className="btn">Book Appointment</Link>
       </div>
     </div>
     <footer className="hero-designer">
