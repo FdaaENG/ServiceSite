@@ -12,7 +12,7 @@ function Services() {
       <div className="services-grid">
         <div className="service-card-vertical">
           <img
-            src="/src/assets/checkup.jpg"
+            src="checkup.jpg"
             alt="Routine Checkup"
             className="card-image"
           />
@@ -39,7 +39,7 @@ function Services() {
 
 
         <div className="service-card-vertical">
-          <img src="/src/assets/vaccination.jpg" alt="Vaccination" className="card-image" />
+          <img src="vaccination.jpg" alt="Vaccination" className="card-image" />
           <div className="card-content">
             <h2 className="card-title">Vaccination</h2>
             <p className="card-description">
@@ -61,7 +61,7 @@ function Services() {
         </div>
 
         <div className="service-card-vertical">
-          <img src="/src/assets/dental.jpg" alt="Dental Care" className="card-image" />
+          <img src="dental.jpg" alt="Dental Care" className="card-image" />
           <div className="card-content">
             <h2 className="card-title">Dental Care</h2>
             <p className="card-description">
@@ -83,7 +83,7 @@ function Services() {
         </div>
 
         <div className="service-card-vertical">
-          <img src="/src/assets/grooming.jpg" alt="Grooming" className="card-image" />
+          <img src="grooming.jpg" alt="Grooming" className="card-image" />
           <div className="card-content">
             <h2 className="card-title">Grooming</h2>
             <p className="card-description">
